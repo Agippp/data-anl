@@ -17,7 +17,7 @@ def create_weekday_changes(df):
     weekday_changes = df.groupby(by='weekday').count_rent.mean().reset_index()
     return weekday_changes
 
-sepeda_df = pd.read_csv("sepeda_df.csv")
+sepeda_df = pd.read_csv("dashboard/sepeda_df.csv")
 datetime_columns = ['dateday']
 sepeda_df.sort_values(by='dateday', inplace=True)
 sepeda_df.reset_index(inplace=True)
